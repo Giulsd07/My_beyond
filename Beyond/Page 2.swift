@@ -44,36 +44,56 @@ struct Page_2: View {
                      
                         
                         Picker("Race", selection: $selection) {
-                            Text("Race").tag("Race")
-                            Text("Dragonborn").tag("Dragonborn")
-                            Text("Elf").tag("Elf")
-                            Text("Dwarf").tag("Dwarf")
-                            Text("Halfling").tag("Halfling")
-                            Text("Human").tag("Human")
-                            Text("Orc").tag("Orc")
+                            Text("Race").foregroundColor(Color.accentColor).tag("Race")
+                                
+                            Text("Dragonborn").foregroundColor(Color.accentColor).tag("Dragonborn")
+                                
+                            Text("Elf").foregroundColor(Color.accentColor)
+                                .tag("Elf")
+                                
+                            Text("Dwarf") .foregroundColor(Color.accentColor)
+                                .tag("Dwarf")
+                               
+                            Text("Halfling").foregroundColor(Color.accentColor)
+                                .tag("Halfling")
+                                
+                            Text("Human").foregroundColor(Color.accentColor).tag("Human")
+                                
+                            Text("Orc").foregroundColor(Color.accentColor)
+                                .tag("Orc")
+                                
                         }
                         .pickerStyle(.wheel)
-                        .tag("\(selection)")
-                        .foregroundStyle(Color.accentColor)
+                        .accessibilitySortPriority(26)
                         Divider()
                         
                         Picker("Class", selection: $selectiondue) {
-                            Text("Class").tag("Class")
-                            Text("Druid").tag("Druid")
-                            Text("Monk").tag("Monk")
-                            Text("Warlock").tag("Warlock")
-                            Text("Fighter").tag("Fighter")
-                            Text("Barbarian").tag("Barbarian")
-                            Text("Cleric").tag("Cleric")
+                            Text("Class")
+                                .foregroundColor(Color.accentColor)
+                                .tag("Class")
+                            Text("Druid") .foregroundColor(Color.accentColor)
+                                .tag("Druid")
+                            Text("Monk") .foregroundColor(Color.accentColor)
+                                .tag("Monk")
+                            Text("Warlock")  .foregroundColor(Color.accentColor)
+                                .tag("Warlock")
+                            Text("Fighter") .foregroundColor(Color.accentColor)
+                                .tag("Fighter")
+                            Text("Barbarian").foregroundColor(Color.accentColor)
+                                .tag("Barbarian")
+                            Text("Cleric") .foregroundColor(Color.accentColor)
+                                .tag("Cleric")
+                               
                             
                         }
                         .pickerStyle(.wheel)
-                        .tag("\(selectiondue)")
-                        .foregroundStyle(Color.accentColor)
+                        
+                        .accessibilitySortPriority(26)
                         
                         
                             Text("Abilities Score")
                                 .padding(.trailing,UIScreen.main.bounds.width/1.8)
+                                .accessibilitySortPriority(25)
                         
                         
                         Line()
@@ -87,6 +107,7 @@ struct Page_2: View {
                                 .fill(Color.dietro)
                                 .frame(width: 40,height: 40)
                                 .overlay (Text("\(one)"))
+                                .accessibilitySortPriority(23)
                             Rectangle()
                             
                                 .fill(Color.dietro)
@@ -95,13 +116,16 @@ struct Page_2: View {
                                 
                                 .overlay(
                                     Text("Strenght")
+                                        .accessibilitySortPriority(24)
                                 )
                             Button(action: {one=one+1}, label: {
                                 Image(systemName: "plus.circle.fill")
+                                    .accessibilitySortPriority(22)
                                 
                             })
                             Button(action: {one=one-1}, label: {
                                 Image(systemName: "minus.circle.fill")
+                                    .accessibilitySortPriority(21)
                                 
                             })
                             
@@ -112,6 +136,7 @@ struct Page_2: View {
                                 .fill(Color.dietro)
                                 .frame(width: 40,height: 40)
                                 .overlay (Text("\(two)"))
+                                .accessibilitySortPriority(19)
                             Rectangle()
                             
                                 .fill(Color.dietro)
@@ -120,13 +145,16 @@ struct Page_2: View {
                                 .foregroundStyle(.black)
                                 .overlay(
                                     Text("Dexterity")
+                                        .accessibilitySortPriority(20)
                                 )
                             Button(action: {two=two+1}, label: {
                                 Image(systemName: "plus.circle.fill")
+                                    .accessibilitySortPriority(18)
                                 
                             })
                             Button(action: {two=two-1}, label: {
                                 Image(systemName: "minus.circle.fill")
+                                    .accessibilitySortPriority(17)
                                 
                             })
                            
@@ -137,6 +165,7 @@ struct Page_2: View {
                                 .fill(Color.dietro)
                                 .frame(width: 40,height: 40)
                                 .overlay (Text("\(three)"))
+                                .accessibilitySortPriority(15)
                             Rectangle()
                             
                                 .fill(Color.dietro)
@@ -145,14 +174,16 @@ struct Page_2: View {
                                 .foregroundStyle(.black)
                                 .overlay(
                                     Text("Costitution")
+                                        .accessibilitySortPriority(16)
                                 )
                             Button(action: {three=three+1}, label: {
                                 Image(systemName: "plus.circle.fill")
+                                    .accessibilitySortPriority(14)
                                 
                             })
                             Button(action: {three=three-1}, label: {
                                 Image(systemName: "minus.circle.fill")
-                                
+                                    .accessibilitySortPriority(13)
                             })
                         }
                         HStack{
@@ -161,6 +192,7 @@ struct Page_2: View {
                                 .fill(Color.dietro)
                                 .frame(width: 40,height: 40)
                                 .overlay (Text("\(four)"))
+                                .accessibilitySortPriority(11)
                             Rectangle()
                             
                                 .fill(Color.dietro)
@@ -169,13 +201,16 @@ struct Page_2: View {
                                 .foregroundStyle(.black)
                                 .overlay(
                                     Text("Intelligence")
+                                        .accessibilitySortPriority(12)
                                 )
                             Button(action: {four=four+1}, label: {
                                 Image(systemName: "plus.circle.fill")
+                                    .accessibilitySortPriority(10)
                                 
                             })
                             Button(action: {four=four-1}, label: {
                                 Image(systemName: "minus.circle.fill")
+                                    .accessibilitySortPriority(9)
                                 
                             })
                         }
@@ -185,6 +220,7 @@ struct Page_2: View {
                                 .fill(Color.dietro)
                                 .frame(width: 40,height: 40)
                                 .overlay (Text("\(five)"))
+                                .accessibilitySortPriority(7)
                             Rectangle()
                             
                                 .fill(Color.dietro)
@@ -193,13 +229,16 @@ struct Page_2: View {
                                 .foregroundStyle(.black)
                                 .overlay(
                                     Text("Wisdom")
+                                        .accessibilitySortPriority(8)
                                 )
                             Button(action: {five=five+1}, label: {
                                 Image(systemName: "plus.circle.fill")
+                                    .accessibilitySortPriority(6)
                                 
                             })
                             Button(action: {five=five-1}, label: {
                                 Image(systemName: "minus.circle.fill")
+                                    .accessibilitySortPriority(5)
                                 
                             })
                         }
@@ -209,6 +248,7 @@ struct Page_2: View {
                                 .fill(Color.dietro)
                                 .frame(width: 40,height: 40)
                                 .overlay (Text("\(six)"))
+                                .accessibilitySortPriority(3)
                             Rectangle()
                             
                                 .fill(Color.dietro)
@@ -217,13 +257,16 @@ struct Page_2: View {
                                 .foregroundStyle(.black)
                                 .overlay(
                                     Text("Charisma")
+                                        .accessibilitySortPriority(4)
                                 )
                             Button(action: {six=six+1}, label: {
                                 Image(systemName: "plus.circle.fill")
+                                    .accessibilitySortPriority(2)
                                 
                             })
                             Button(action: {six=six-1}, label: {
                                 Image(systemName: "minus.circle.fill")
+                                    .accessibilitySortPriority(1)
                                 
                             })
                         }

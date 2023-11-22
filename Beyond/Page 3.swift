@@ -33,18 +33,32 @@ struct Page_3: View {
                     VStack{
                         
                         Picker("Background", selection: $selectiontre) {
-                            Text("Background").tag("Background")
-                            Text("Criminal/Spy").tag("Criminal/Spy")
-                            Text("Folk Hero").tag("Folk Hero")
-                            Text("Haunted One").tag("Haunted One")
-                            Text("Noble").tag("Noble")
-                            Text("Sage").tag("Sage")
-                            Text("Soldier").tag("Soldier")
-                            Text("Acolyte").tag("Acolyte")
+                            Text("Background").foregroundColor(Color.accentColor)
+                                .tag("Background")
+                                
+                            Text("Criminal/Spy").foregroundColor(Color.accentColor)
+                                .tag("Criminal/Spy")
+                                
+                            Text("Folk Hero").foregroundColor(Color.accentColor)
+                                .tag("Folk Hero")
+                               
+                            Text("Haunted One").foregroundColor(Color.accentColor)
+                                .tag("Haunted One")
+                               
+                            Text("Noble").foregroundColor(Color.accentColor)
+                                .tag("Noble")
+                                
+                            Text("Sage").foregroundColor(Color.accentColor)
+                                .tag("Sage")
+                                
+                            Text("Soldier").foregroundColor(Color.accentColor)
+                                .tag("Soldier")
+                            
+                            Text("Acolyte").foregroundColor(Color.accentColor).tag("Acolyte")
+                                
                         }
                         .pickerStyle(.wheel)
-                        .foregroundColor(Color.accentColor)
-                        .tag("\($selectiontre)")
+                        
                         
                         .onChange(of: selectiontre) { select in
                             proficiencies = backgrounds.storie.first(where: { $0.name == "\(select)"}) ?? nil
@@ -52,16 +66,18 @@ struct Page_3: View {
                         }
                         if proficiencies?.tools?.prof.count ?? 0 > 1 {
                             Picker("Toolsprof", selection: $selectionquattro) {
-                                Text("Choose Tool Proficiences").tag("Choose Tool Proficiences")
+                                Text("Choose Tool Proficiences")
+                                    .tag("Choose Tool Proficiences")
+                                
                                 Text("Dice Set").tag("Dice Set")
                                 Text("Dragonchess Set").tag("Dragonchess Set")
                                 Text("Playing Card Set").tag("Playing Card Set")
                                 Text("Three-Dragon Ante Set").tag("Three-Dragon Ante Set")
                             }
                             
-                            .pickerStyle(.automatic)
-                            //.preferredColorScheme(.dark)
-                            .foregroundColor(Color.accentColor)
+                            .pickerStyle(.menu)
+                            .preferredColorScheme(.dark)
+                            
                             
                             
                         }

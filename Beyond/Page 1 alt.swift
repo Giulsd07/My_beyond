@@ -38,8 +38,8 @@ struct Page_1_alt: View {
                                 .foregroundColor(Color.orange.opacity(0.0))
                                 .overlay(RoundedRectangle(cornerRadius: 0).strokeBorder(style: .init(lineWidth: 2, dash: [15])
                                 )
-                                    .overlay(Image(systemName: "plus"))
-                                    .font(.title)
+                                    
+                                 
 )
                                 .foregroundStyle(Color.accentColor)
                             Rectangle()

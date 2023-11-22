@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct ContentView: View {
+    private var toreadfirst = Bool()
     var body: some View {
        
             
@@ -22,6 +23,7 @@ struct ContentView: View {
                             
                             Image("dragon")
                                 .position(CGPoint(x: 80.0, y: 110.0))
+                                .accessibilityHidden(true)
                             
                             
                             Text("Your adventure will start soon")
@@ -30,6 +32,7 @@ struct ContentView: View {
                                 .foregroundStyle(Color.accentColor)
                                 .padding(.leading,UIScreen.main.bounds.width/12)
                                 .padding(.trailing,UIScreen.main.bounds.width/7)
+                                
                             
                             Text("Characters you create will appear \nhere. You currently have no character")
                                 .font(.title3)
