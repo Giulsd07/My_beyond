@@ -220,6 +220,7 @@ struct Page_3: View {
                         
                         NavigationLink("Done", destination: Page_1_alt())
                         
+                        
                     }
                 }
         }

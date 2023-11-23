@@ -292,6 +292,7 @@ struct Page_2: View {
                     
                     NavigationLink("Next", destination: Page_3())
                         
+                        
                     
                 }
                 
